@@ -1,0 +1,49 @@
+extends layout
+
+block contenido
+    .busquedaprincipal
+        h1 Busqueda PetHistory
+        p(style='color:red') Profe le envio lo que llevamos del proyecto, la idea es recrear lo que estoy implementando en mi nuevo producto que lo puede encontrar aqui ya funcionando https://pethistory.globalredlatinoamerica.com/mascota/3Xk4EiWyEc0yln5DrnMaEg==
+            br 
+            strong pero lo estamos llevando acabo con su metodologia.
+        if(flag != "vacio")
+                each proyecto in proyectos
+                    section(style='padding:15px;')
+                    .container-lg(style='text-align:Center;')
+                        .card(style='width: 250px;display: inline-block;vertical-align: top;padding:15px;')
+                            div(style='text-align:center;')
+                                #imgMascotaVer
+                                #imgPerfil.borderimgporfile(style='background-image: url(https://pethistory.globalredlatinoamerica.com/as/img/pethistory5.svg);')
+                            #viewDatosMascota(style='')
+                                .contendorDatosBasicoMascota
+                                span Id Mascota: 
+                                p#txtnombreMascota(style='font-size: 18px;') #{proyecto.id}
+                                .contendorDatosBasicoMascota
+                                span Nombre: 
+                                p#txtnombreMascota(style='font-size: 18px;') #{proyecto.nombre}
+                                .contendorDatosBasicoMascota
+                                span Fecha Nacimiento: 
+                                p#txtfechaNaceMactoa #{proyecto.fecha_nace}
+                                .contendorDatosBasicoMascota
+                                span Genero: 
+                                p#txtgeneroMascota #{proyecto.genero}
+                                .contendorDatosBasicoMascota
+                                span Especie: 
+                                p#txtespecieMascota #{proyecto.especie}
+                               
+                                br
+                        .card(style='width: 100%;max-width: 450px;display: inline-block;vertical-align: top;')
+                            div(style='')
+                                h1 Datos del due&ntilde;o
+                                .contendorDatosBasicoMascota
+                                
+                                    each tarea in tareas
+                                        .contendorDatosBasicoMascota
+                                        span Nombre: 
+                                            p=tarea.tarea
+                                        .contendorDatosBasicoMascota
+                                        span Contacto: 
+                                            p=tarea.estado
+        else
+            .card(style='text-align:center;')
+                p el ID de mascota ingresado no existe o ya fue adoptado                              

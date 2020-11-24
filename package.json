@@ -1,0 +1,46 @@
+{
+  "name": "busquedanode",
+  "version": "1.0.0",
+  "description": "Seccion busqueda por node V2",
+  "main": "index.js",
+  "scripts": {
+    "dev": "nodemon ./index.js",
+    "watch": "webpack --w --mode development",
+    "start": "concurrently \"npm run dev \" \"npm run watch\""
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jaquimbayoc7/tareasnodejs.git"
+  },
+  "author": "Juan Jose Roa Ruiz, David Camilo Muñoz Yunda, Arnol Stiven Saavedra",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/jaquimbayoc7/tareasnodejs/issues"
+  },
+  "homepage": "https://github.com/jaquimbayoc7/tareasnodejs#readme",
+  "dependencies": {
+    "axios": "^0.20.0",
+    "body-parser": "^1.19.0",
+    "clean": "^4.0.2",
+    "concurrently": "^5.3.0",
+    "core-util-is": "^1.0.2",
+    "express": "^4.17.1",
+    "express-validator": "^6.6.1",
+    "mysql2": "^2.1.0",
+    "node": "^14.15.0",
+    "pug": "^3.0.0",
+    "sequelize": "^6.3.4",
+    "shortid": "^2.2.15",
+    "slug": "^3.3.4",
+    "sweetalert2": "^10.3.5",
+    "webpack-dev-server": "^3.11.0"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.11.6",
+    "@babel/preset-env": "^7.11.5",
+    "babel-loader": "^8.1.0",
+    "nodemon": "^2.0.4",
+    "webpack": "^4.44.2",
+    "webpack-cli": "^3.3.12"
+  }
+}
