@@ -5,7 +5,7 @@ const path = require('path');
 const bodyParser = require('body-parser');
 
 const helpers= require('./helpers');
-require('dotenv').config({path:variables.env});
+require('dotenv').config({path:'variables.env'});
 require('./models/Mascota');
 require('./models/Amo');
 
@@ -46,7 +46,7 @@ app.use(bodyParser.urlencoded({extended:true}));
 app.use('/', routes());
 
 const host = process.env.HOST || '0.0.0.0';
-const port = process.env.PORT || 5000;
+const port = process.env.PORT || 6000;
 
 app.listen(port,host, () => {
     console.log("server activo");
